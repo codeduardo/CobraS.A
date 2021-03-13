@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/style.css')}}">
+    <title>American Group</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top__content">
+                    <div class="logo-section">
+                        <a href="">
+                            <img src="{{url_for('static',filename='/img/logito.png')}}" alt="">
+                        </a>
+                    </div>
+    
+                    <div class="information">
+                        <ul>
+                            <li><i class="far fa-envelope"></i><span>example@example.com</span></li>
+                            <li><i class="fas fa-mobile-alt"></i><span>064 216415</span></li>
+                            <li><i class="far fa-clock"></i><span>Lun - Vie: 9:00 - 18:00</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom__content">
+                    <nav class="navbar">
+                        <div class="menu-section">
+                            <div class="navbar-nav">
+                                <ul>
+                                    <li><a href="/">HOME</a></li>
+                                    <li><a href="/about">¿QUIENES SOMOS?</a></li>
+                                    <li><a href="/services">SERVICIOS</a></li>
+                                    <li><a href="/projects">PROYECTOS</a></li>
+                                    <li><a href="/contacto">CONTACTO</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="search">
+                                <input type="text" placeholder=Search>
+                                <a href="" class="search-button">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="hero">
+                <div class="hero-content">
+                    <input type="radio" id="1" name="slide-img" hidden>
+                    <input type="radio" id="2" name="slide-img" hidden>
+                    <input type="radio" id="3" name="slide-img" hidden>
+
+                    <div class="slide-content">
+                        <div class="box-slide">
+                            <img src="{{url_for('static',filename='/img/slides/slide1.jpg')}}" alt="Imagen del slide 1">
+                        </div>
+                        <div class="box-slide">
+                            <img src="{{url_for('static',filename='/img/slides/slide2.jpg')}}" alt="Imagen del slide 2">
+                        </div>
+                        <div class="box-slide">
+                            <img src="{{url_for('static',filename='/img/slides/slide3.jpg')}}" alt="Imagen del slide 3">
+                        </div>
+                    </div>
+
+                    <div class="pagination-content">
+                        <label class="pagination-label" for="1">
+                            <img src="{{url_for('static',filename='/img/slides/slide1.jpg')}}" alt="Imagen de la paginación 1">
+                        </label>
+                        <label class="pagination-label" for="2">
+                            <img src="{{url_for('static',filename='/img/slides/slide2.jpg')}}" alt="Imagen de la paginación 2">
+                        </label>
+                        <label class="pagination-label" for="3">
+                            <img src="{{url_for('static',filename='/img/slides/slide3.jpg')}}" alt="Imagen de la paginación 3">
+                        </label>
+                    </div>  
+                </div>
+        </div>
+    </main>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-title">
+                    <i class="fas fa-address-card"></i>
+                    <h3>Sobre Nosotros</h3>
+                </div>   
+                <div class="about-info">
+                    <div class="info-image" id="animado">
+                        <img src="{{url_for('static',filename='/img/about.jpeg')}}" alt="">
+                    </div>
+                    <div class="info-text" id="animado">
+                        <p>El “INSTITUTO AMERICANO DE GERENCIA Y CONSTRUCCIÓN” SAC, es una empresa de servicios de Consultoría, Ejecución de obras y de Formación Técnica Profesional en el ámbito público y privado, cuya misión es satisfacer las necesidades de sus clientes antes, durante y después de finalizado el proyecto. Dando cumplimiento a los estándares de calidad y plazos fijados por éste, generando con ello relaciones duraderas, basadas en la experiencia y profesionalismo. Respetaran la legislación medioambiental, laboral y toda aquella que tenga relación con el que hacer de la organización, buscando siempre oportunidades para el desarrollo de sus trabajadores, generando vínculos estratégicos con sus proveedores y creando valor a sus dueños y accionistas. </p>
+                        <a href="">VER MAS</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="wrap-team">
+            <div class="container">
+                <div class="team-content">
+                    <div class="team-title">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Nuestro Equipo</h3>
+                    </div>
+                    <div class="team-card__content">
+                        <div class="card-content">
+                            <div class="people">
+                                <div class="people-nav">
+                                    <i class="verify fas fa-check-circle"></i>
+                                </div>
+    
+                                <div class="people-content">
+                                    <img src="{{url_for('static',filename='/img/user.png')}}" alt="">
+                                    <strong>Paola Safora Ruiz</strong>
+                                    <p>Gerente Técnico</p>
+                                </div>
+    
+                                <div class="people-footer">
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card-content">
+                            <div class="people">
+                                <div class="people-nav">
+                                    <i class="verify fas fa-check-circle"></i>
+                                </div>
+    
+                                <div class="people-content">
+                                    <img src="{{url_for('static',filename='/img/user.png')}}" alt="">
+                                    <strong>Paola Safora Ruiz</strong>
+                                    <p>Gerente Técnico</p>
+                                </div>
+    
+                                <div class="people-footer">
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card-content">
+                            <div class="people">
+                                <div class="people-nav">
+                                    <i class="verify fas fa-check-circle"></i>
+                                </div>
+    
+                                <div class="people-content">
+                                    <img src="{{url_for('static',filename='/img/user.png')}}" alt="">
+                                    <strong>Paola Safora Ruiz</strong>
+                                    <p>Gerente Técnico</p>
+                                </div>
+    
+                                <div class="people-footer">
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card-content">
+                            <div class="people">
+                                <div class="people-nav">
+                                    <i class="verify fas fa-check-circle"></i>
+                                </div>
+    
+                                <div class="people-content">
+                                    <img src="{{url_for('static',filename='/img/user.png')}}" alt="">
+                                    <strong>Paola Safora Ruiz</strong>
+                                    <p>Gerente Técnico</p>
+                                </div>
+    
+                                <div class="people-footer">
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card-content">
+                            <div class="people">
+                                <div class="people-nav">
+                                    <i class="verify fas fa-check-circle"></i>
+                                </div>
+    
+                                <div class="people-content">
+                                    <img src="{{url_for('static',filename='/img/user.png')}}" alt="">
+                                    <strong>Paola Safora Ruiz</strong>
+                                    <p>Gerente Técnico</p>
+                                </div>
+    
+                                <div class="people-footer">
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card-content">
+                            <div class="people">
+                                <div class="people-nav">
+                                    <i class="verify fas fa-check-circle"></i>
+                                </div>
+    
+                                <div class="people-content">
+                                    <img src="{{url_for('static',filename='/img/user.png')}}" alt="">
+                                    <strong>Paola Safora Ruiz</strong>
+                                    <p>Gerente Técnico</p>
+                                </div>
+    
+                                <div class="people-footer">
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="services-content">
+                <div class="services-title">
+                    <i class="fab fa-servicestack"></i>
+                    <h3>Nuestros Servicios</h3>
+                </div>
+
+                <div class="services-card__content">
+                    <div class="service-card">
+                        <div class="service">
+                            <div class="service-image">
+                                <img src="{{url_for('static',filename='/img/001-consultoria.png')}}" alt="">
+                            </div>
+                            <p>Consultoría y Eejecución</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service">
+                            <div class="service-image">
+                                <img src="{{url_for('static',filename='/img/002-online-learning.png')}}" alt="">
+                            </div>
+                            <p>Dictado de cursos</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service">
+                            <div class="service-image">
+                                <img src="{{url_for('static',filename='/img/004-expediente.png')}}" alt="">
+                            </div>
+                            <p>Elaboración de expedientes</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service">
+                            <div class="service-image">
+                                <img src="{{url_for('static',filename='/img/estudio_suelos.png')}}" alt="">
+                            </div>
+                            <p>Estudio de suelos</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service">
+                            <div class="service-image">
+                                <img style="width: 80px;" src="{{url_for('static',filename='/img/administracion_obras.png')}}" alt="">
+                            </div>
+                            <p>Administración de obras.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service">
+                            <div class="service-image">
+                                <img style="width: 110px;" src="{{url_for('static',filename='/img/levantamiento_topografico.png')}}" alt="">
+                            </div>
+                            <p>Levantamiento topográfico</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service">
+                            <div class="service-image">
+                                <img style="width: 100px;" src="{{url_for('static',filename='/img/materiales_construccion.png')}}" alt="">
+                            </div>
+                            <p>Comercialización</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service">
+                            <div class="service-image">
+                                <img style="width: 80px;" src="{{url_for('static',filename='/img/equipos_topograficos.png')}}" alt="">
+                            </div>
+                            <p>Alquiler y venta de equipos  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="proyects">
+    </section>
+
+    <section class="finished-projects">
+        <div class="wrap-finished__projects">
+            <div class="container">
+                <div class="finished-proyects__content">
+                    <div class="box-finished__proyects">
+                        <div class="finished-projects__title">
+                            <h3>Proyectos Terminados</h3>
+                        </div>
+        
+                        <div class="projects-number">
+                            <div class="box-projects__number">
+                                <i class="fas fa-truck-monster"></i>
+                                <p>2368</p>
+                                <span>Proyectos completados</span>
+                            </div>
+                            <div class="box-projects__number">
+                                <i class="fas fa-truck-monster"></i>
+                                <p>2368</p>
+                                <span>Proyectos completados</span>
+                            </div>
+                            <div class="box-projects__number">
+                                <i class="fas fa-truck-monster"></i>
+                                <p>2368</p>
+                                <span>Proyectos completados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-title">
+                    <i class="fas fa-sms"></i>
+                    <h3>Contacto</h3>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-description">
+                        <h4>¿Tiene planes con nosotros?</h4>
+                        <span>Nos pondremos en contacto contigo en menos de 24h para concretar la cita y nos cuentes tu proyecto, tu idea, tu plan o tus necesidades con nosotros.</span>
+                    </div>
+
+                    <div class="form">
+                        <h2>FORMULARIO DE CONTACTO</h2>
+                        <form action="" class="form-contact" method = 'POST'> 
+                            {{ formularioForm.csrf_token }}
+                            
+                            <div class="box">
+                                <div class="icon user">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                {{ formularioForm.nombres(size=20,placeholder='Nombres') }}
+                            </div>
+
+                            <div class="box">
+                                <div class="icon user">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                {{ formularioForm.apellidos(size=20,placeholder='Apellidos') }}
+                            </div>
+
+                            <div class="box">
+                                <div class="icon email">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                {{ formularioForm.email(size=20,placeholder='Email') }}
+                            </div>
+
+                            <div class="box">
+                                <div class="icon phone">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                {{ formularioForm.celular(size=20,placeholder='Celular') }}
+                            </div>
+
+                            <div class="box">
+                                <div class="icon pen">
+                                    <i class="fas fa-pen-alt"></i>
+                                </div>
+                                {{ formularioForm.mensaje(rows="5" ,cols="50",placeholder='Escriba un mensaje') }}
+                            </div>
+
+                            <div class="box">
+                                <div class="icon enviar">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <button type="submit">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="box-footer__about box-footer">
+                    <div class="footer-about__title">
+                        <h4>ABOUT  US</h4>
+                    </div>
+                    <div class="footer-about__content">
+                        <img src="{{url_for('static',filename='/img/logito.png')}}" alt="">
+                        <p>Lorem ipsum ipsumipsum psum dolor sit amet consectetur adipisicing elit. Aut dolores corrupti ipsum culpa similique laborum debitis tempor</p>
+                    </div>
+                </div>
+
+                <div class="box-footer__information box-footer">
+                    <div class="footer-information__title">
+                        <h4>Información</h4>
+                    </div>
+
+                    <div class="footer-information__content">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Servicios</a></li>
+                            <li><a href="">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box-footer__service box-footer">
+                    <div class="footer-services__title">
+                        <h4>Servicios</h4>
+                    </div>
+
+                    <div class="footer-services__content">     
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+
+                </div>
+
+                <div class="box-footer__contact box-footer">
+                    <div class="footer-contact__title">
+                        <h4>Contacto</h4>
+                    </div>
+
+                    <div class="footer-contact__content">
+                        <div class="location">
+                            <span>Av. Los Logos</span>
+                        </div>
+                        <div class="phone">
+                            <span>064 216115</span>
+                        </div>
+                        <div class="email">
+                            <span>example@example.com</span>
+                        </div>
+                        <div class="cellular">
+                            <span>964281045</span>
+                        </div>
+                        <div class="attention">
+                            <span>Lun - Vie: 9:00 - 18:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <span>Derehos reservados</span>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/84c5c2d3be.js" crossorigin="anonymous"></script>
+    <script src="{{url_for('static',filename='/js/animaciones.js')}}"></script>
+</body>
+</html>

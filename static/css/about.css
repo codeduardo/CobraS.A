@@ -1,0 +1,121 @@
+.section-about__info h4 {
+    padding: 20px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 10px;
+}
+
+.section-about__info h4::before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 20px;
+    background-color: #ffac2f;
+    left: 0;
+}
+
+span {
+    display: block;
+    text-align: justify;
+}
+
+.section-about {
+    background-image: url(../img/section_about.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 96px;
+}
+
+.section-about__hero {
+    background-color: rgba(0,0,0, .1);
+}
+
+.section-about__content span {
+    display: block;
+    padding: 100px 0;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+
+.about-info__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0;
+}
+
+.about-info__left {
+    width: 28%;
+}
+
+.info-left__nav ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.info-left__nav ul li{
+    text-align: center;
+    margin-bottom: 2px;
+    width: 100%;
+    background: #8e9eab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.info-left__nav ul li a {
+    display: block;
+    padding: 12px 0;
+    width: 100%;
+    color: #fff;
+}
+
+.info-left__contact ul li {
+    display: flex;
+    align-items: center;
+}
+
+.info-left__contact ul li i {
+    font-size: 1.4rem;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #868686;
+}
+
+.info-left__contact ul li span {
+    font-size: 14px;
+}
+
+.about-info__right {
+    width: 70%;
+}
+
+.company img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.company-info span {
+    width: 90%;
+    margin: auto;
+}
+
+.company-mision span {
+    width: 90%;
+    margin: auto;
+}
+
+
+.company-vision span{
+    width: 90%;
+    margin: auto;
+}

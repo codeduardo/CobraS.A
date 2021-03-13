@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/style.css')}}">
+    <title>Projectos</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top__content">
+                    <div class="logo-section">
+                        <a href="">
+                            <img src="{{url_for('static',filename='/img/logito.png')}}" alt="">
+                        </a>
+                    </div>
+    
+                    <div class="information">
+                        <ul>
+                            <li><i class="far fa-envelope"></i><span>example@example.com</span></li>
+                            <li><i class="fas fa-mobile-alt"></i><span>064 216415</span></li>
+                            <li><i class="far fa-clock"></i><span>Lun - Vie: 9:00 - 18:00</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom__content">
+                    <nav class="navbar">
+                        <div class="menu-section">
+                            <div class="navbar-nav">
+                                <ul>
+                                    <li><a href="/">HOME</a></li>
+                                    <li><a href="/about">¿QUIENES SOMOS?</a></li>
+                                    <li><a href="/services">SERVICIOS</a></li>
+                                    <li><a href="/projects">PROYECTOS</a></li>
+                                    <li><a href="/contacto">CONTACTO</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="search">
+                                <input type="text" placeholder=Search>
+                                <a href="" class="search-button">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="box-footer__about box-footer">
+                    <div class="footer-about__title">
+                        <h4>ABOUT  US</h4>
+                    </div>
+                    <div class="footer-about__content">
+                        <img src="{{url_for('static',filename='/img/logito.png')}}" alt="">
+                        <p>Lorem ipsum ipsumipsum psum dolor sit amet consectetur adipisicing elit. Aut dolores corrupti ipsum culpa similique laborum debitis tempor</p>
+                    </div>
+                </div>
+
+                <div class="box-footer__information box-footer">
+                    <div class="footer-information__title">
+                        <h4>Información</h4>
+                    </div>
+
+                    <div class="footer-information__content">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Servicios</a></li>
+                            <li><a href="">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box-footer__service box-footer">
+                    <div class="footer-services__title">
+                        <h4>Servicios</h4>
+                    </div>
+
+                    <div class="footer-services__content">     
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+
+                </div>
+
+                <div class="box-footer__contact box-footer">
+                    <div class="footer-contact__title">
+                        <h4>Contacto</h4>
+                    </div>
+
+                    <div class="footer-contact__content">
+                        <div class="location">
+                            <span>Av. Los Logos</span>
+                        </div>
+                        <div class="phone">
+                            <span>064 216115</span>
+                        </div>
+                        <div class="email">
+                            <span>example@example.com</span>
+                        </div>
+                        <div class="cellular">
+                            <span>964281045</span>
+                        </div>
+                        <div class="attention">
+                            <span>Lun - Vie: 9:00 - 18:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <span>Derehos reservados</span>
+        </div>
+    </div>
+</body>
+</html>

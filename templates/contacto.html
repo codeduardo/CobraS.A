@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/contact.css')}}">
+    <title>Contacto</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top__content">
+                    <div class="logo-section">
+                        <a href="">
+                            <img src="{{url_for('static',filename='/img/logito.png')}}" alt="">
+                        </a>
+                    </div>
+    
+                    <div class="information">
+                        <ul>
+                            <li><i class="far fa-envelope"></i><span>example@example.com</span></li>
+                            <li><i class="fas fa-mobile-alt"></i><span>064 216415</span></li>
+                            <li><i class="far fa-clock"></i><span>Lun - Vie: 9:00 - 18:00</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom__content">
+                    <nav class="navbar">
+                        <div class="menu-section">
+                            <div class="navbar-nav">
+                                <ul>
+                                    <li><a href="/">HOME</a></li>
+                                    <li><a href="/about">¿QUIENES SOMOS?</a></li>
+                                    <li><a href="/services">SERVICIOS</a></li>
+                                    <li><a href="/projects">PROYECTOS</a></li>
+                                    <li><a href="/contacto">CONTACTO</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="search">
+                                <input type="text" placeholder=Search>
+                                <a href="" class="search-button">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-contact">
+        <div class="section-contact__hero">
+            <div class="container">
+                <div class="section-contact__content">
+                    <span>Contacto</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-contact__info">
+        <div class="container">
+            <div class="contact-info__content">
+                <div class="wrapper-contact-left item-contact">
+                    <div class="wrap-contact__data">
+                        <div class="data-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="data-text">
+                            <h4>Dirección</h4>
+                            <span>Calle Los Dogos N° 153 <br> La Rivera Huancayo Oficina administrativa </span>
+                        </div>
+                    </div>
+                    <div class="wrap-contact__data">
+                        <div class="data-icon">
+                            <i class="fas fa-blender-phone"></i>
+                        </div>
+                        <div class="data-text">
+                            <h4>Celular</h4>
+                            <span>998914850 - 064 603042 – 064 765405</span>
+                        </div>
+                    </div>
+                    <div class="wrap-contact__data">
+                        <div class="data-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="data-text">
+                            <h4>Email</h4>
+                            <span>Gerencia_construccion2012@hotmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper-contact__right item-contact">
+                    <div class="form" >
+                        <form action="" class="form-contact" method="POST"> 
+                            {{ formularioForm.csrf_token }}
+                            <div class="box box-contact">
+                                <div class="icon user">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                {{ formularioForm.nombres(size=20,placeholder ='Nombres') }}
+                            </div>
+
+                            <div class="box box-contact">
+                                <div class="icon user">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                {{ formularioForm.apellidos(size=20,placeholder = 'Apellidos') }}
+                            </div>
+
+                            <div class="box box-contact">
+                                <div class="icon email">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                {{ formularioForm.email(size=20,placeholder = 'Email') }}
+                            </div>
+
+                            <div class="box box-contact">
+                                <div class="icon phone">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                {{ formularioForm.celular(size=20,placeholder= 'Celular') }}
+                            </div>
+
+                            <div class="box box-contact">
+                                <div class="icon pen">
+                                    <i class="fas fa-pen-alt"></i>
+                                </div>
+                                {{ formularioForm.mensaje(rows="5" ,cols="50",placeholder='Escriba un mensaje') }}
+                            </div>
+
+                            <div class="box box-contact">
+                                <div class="icon enviar">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <button type="submit">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-location">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.3708472278245!2d-75.22917497875565!3d-12.079016497328794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e966138bd90a9%3A0x4ce25a2593227b09!2sJir%C3%B3n%20Los%20Dogos%20153%2C%20Huancayo%2012004!5e0!3m2!1ses!2spe!4v1614015822945!5m2!1ses!2spe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="box-contact-footer__about box-footer">
+                    <div class="footer-about__title">
+                        <h4>ABOUT  US</h4>
+                    </div>
+                    <div class="footer-about__content">
+                        <img src="{{url_for('static',filename='/img/logito.png')}}" alt="">
+                        <p>Lorem ipsum ipsumipsum psum dolor sit amet consectetur adipisicing elit. Aut dolores corrupti ipsum culpa similique laborum debitis tempor</p>
+                    </div>
+                </div>
+
+                <div class="box-footer__information box-footer">
+                    <div class="footer-information__title">
+                        <h4>Información</h4>
+                    </div>
+
+                    <div class="footer-information__content">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box-footer__service box-footer">
+                    <div class="footer-services__title">
+                        <h4>Servicios</h4>
+                    </div>
+
+                    <div class="footer-services__content">     
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+
+                </div>
+
+                <div class="box-footer__contact box-footer">
+                    <div class="footer-contact__title">
+                        <h4>Contacto</h4>
+                    </div>
+
+                    <div class="footer-contact__content">
+                        <div class="location">
+                            <span>Av. Los Logos</span>
+                        </div>
+                        <div class="phone">
+                            <span>064 216115</span>
+                        </div>
+                        <div class="email">
+                            <span>example@example.com</span>
+                        </div>
+                        <div class="cellular">
+                            <span>964281045</span>
+                        </div>
+                        <div class="attention">
+                            <span>Lun - Vie: 9:00 - 18:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <span>Derehos reservados</span>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/84c5c2d3be.js" crossorigin="anonymous"></script>
+</body>
+</html>
