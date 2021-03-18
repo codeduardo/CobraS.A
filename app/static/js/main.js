@@ -11,7 +11,7 @@ const messageDelcategory= category =>{
 function mostrarAlerta(category,message){
     Swal.fire({
         icon: category,
-        title: messageDelcategory(),
+        title: messageDelcategory(category),
         text: message,
       })
 }

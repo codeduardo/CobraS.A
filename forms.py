@@ -9,8 +9,7 @@ class FormularioForm(FlaskForm):
     celular = IntegerField('celular',validators=[DataRequired()])
     mensaje = TextAreaField('',validators=[DataRequired(), Length(min=5,max=254)])
     
-class UsuarioForm(FlaskForm):
-    nombre = StringField('Nombre: ',validators=[DataRequired(),Length(min=5,max=40)])
+class LoginForm(FlaskForm):
     username = StringField('Username: ',validators=[DataRequired(),Length(min=5,max=40)])
-    password = PasswordField('Password: ',validators=[DataRequired(),Length(min=5,max=40)])
+    password = PasswordField('Password: ',validators=[DataRequired(),Length(min=4,max=40)])
     submit = SubmitField('LOGIN')

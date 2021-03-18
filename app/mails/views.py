@@ -1,14 +1,15 @@
 from flask import render_template,url_for,redirect,flash
-
+from flask_login import login_required,current_user
 
 from . import mails
 from ..database import Usuario, Formulario,db
 
 @mails.route('/')
+@login_required
 def home():
     formularios = Formulario.query.all()   
     
-    return render_template('mails/home.html',formularios = formularios)
+    return render_template('mails/home.html',formularios = formularios,username = current_user.username)
 
 @mails.route('/detail/<int:id>')
 def detail(id):
