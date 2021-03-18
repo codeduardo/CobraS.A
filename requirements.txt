@@ -6,3 +6,4 @@ python-decouple
 Flask-bootstrap
 Flask-Bootstrap
 Flask-Login
+email-validator
