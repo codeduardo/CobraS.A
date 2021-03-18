@@ -1,0 +1,13 @@
+{% block scripts %}
+    <script src ="{{url_for('static',filename='/node_modules/sweetalert2/dist/sweetalert2.all.min.js')}}"></script>
+    <script src="{{url_for('static',filename = 'js/main.js')}}"></script>
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <ul class=flashes>
+            {% for category , message in messages %}
+            <script>mostrarAlerta('{{category}}','{{message}}')</script>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}   
+{% endblock %}

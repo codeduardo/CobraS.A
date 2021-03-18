@@ -1,6 +1,8 @@
 Flask
 Flask-SQLAlchemy
 Flask-WTF
-Flask-Migrate
 psycopg2
 python-decouple
+Flask-bootstrap
+Flask-Bootstrap
+Flask-Login

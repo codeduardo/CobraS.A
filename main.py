@@ -1,40 +1,21 @@
 #modulos instalados
-from flask import Flask,render_template,request,redirect,url_for
-from flask_migrate import Migrate
+from flask import Flask,render_template,request,redirect,url_for,flash
 from decouple import config
 import smtplib
 
 #modulos locales
-from database import db
-from models import Formulario
+from app import init_app
+from app.migrate import init_db
+from app.database import db,Formulario,Usuario
 from forms import FormularioForm
 
 
-#variables para la conexion a la base de datos
-USER= 'postgres'
-PASS = 'admin'
-HOST = 'localhost'
-NAME_DB='COBRA'
-FULL_URL = f'postgresql://{USER}:{PASS}@{HOST}/{NAME_DB}'
-
-
-#se crea la aplicacion
-app = Flask(__name__)
-
-#configuracion de la app para la bd
-app.config['SQLALCHEMY_DATABASE_URI']= FULL_URL
-
-
-#se crea la base de datos
-db.init_app(app)
-
-#migrar tablas
-migrate = Migrate()
-migrate.init_app(app, db)
-
-app.config['SECRET_KEY'] = 'llave_secreta'
-
-
+app = init_app()
+@app.route('/database')
+def database():
+    init_db()
+    return 'base de datos creada corectamente'
+    
 @app.route('/',methods=['GET','POST'])
 def inicio():
     formulario = Formulario()
@@ -65,7 +46,7 @@ def inicio():
     
             db.session.add(formulario)
             db.session.commit()
-            
+            flash('Correo Enviado',category = 'success')
             
             return redirect(url_for('inicio'))
 
@@ -89,6 +70,7 @@ def contacto():
             
             db.session.add(formulario)
             db.session.commit()
+            flash('Correo Enviado',category = 'success')
             return redirect(url_for('contacto'))
 
     return render_template('contacto.html',formularioForm = formularioForm)
