@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{super()}}
+    Mails
+{% endblock %}
+
+
+{% block content %}
+    <div class="conteiner">
+        <div class="raw">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="jumbotron">
+                    <h1 class="display-4 text-capitalize">{{formulario.nombres}} {{formulario.apellidos}}</h1>
+                    <p class="lead">Email: {{formulario.email}}</p>
+                    <p>Celular: {{formulario.celular}}</p>
+                    <hr class="my-4">
+                    <p>{{formulario.mensaje}}</p>
+                    <p class="lead">
+                      <a class="btn btn-success btn-lg" href="{{url_for('mails.home')}}" role="button">Volver</a>
+                    </p>
+                  </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -22,6 +22,7 @@ def inicio():
     formularioForm = FormularioForm(obj=formulario)
     if request.method == 'POST':
         if formularioForm.validate_on_submit():
+            
             formularioForm.populate_obj(formulario)
             
             message = '''

@@ -4,3 +4,32 @@
     {{super()}}
     Mails
 {% endblock %}
+
+
+{% block content %}
+    <div class="conteiner">
+        <div class="raw">
+            <div class="col-md-6 col-md-offset-3">
+                <table class="table table-striped">
+                    <thead class="text-uppercase">
+                        <th scope ='col' >Interesado</th>
+                        <th scope ='col'>Descripción</th>
+                        <th scope ='col' class="text-center">Opciones</th>
+                    </thead>
+                    <tbody>
+                        {% for formulario in formularios %}
+                        <tr class="{% if formulario.done %} done {% endif %}">
+                            <th scope = 'row' class = "text-capitalize">{{formulario.nombres}} {{formulario.apellidos}}</th>
+                            <td> <a href="{{url_for('mails.detail',id = formulario.id)}}">Descripción </a>  </td>
+                            <td align="center" > 
+                                <a  href="{{url_for('mails.done',id = formulario.id)}}"><span class="fas fa-check-square"></span></a> 
+                                <a href="{{url_for('mails.delete', id = formulario.id)}}"><span class="fas fa-trash"></span></a>  
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

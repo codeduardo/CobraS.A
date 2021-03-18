@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
+from flask_fontawesome import FontAwesome
 
 from .config import Config
 from .database import db
@@ -12,6 +13,7 @@ from .database import db
 def init_app():
     app = Flask(__name__)
     bootstrap = Bootstrap(app)
+    fa = FontAwesome(app)
     app.config.from_object(Config)
     db.init_app(app)
    

@@ -10,6 +10,7 @@ class Usuario(db.Model):
     username = db.Column(db.String(80))
     password = db.Column(db.String(250))
     is_admin = db.Column(db.Boolean, default=False)
+    
 
     def set_password(self, password):
         self.password = generate_password_hash(password)
@@ -25,3 +26,4 @@ class Formulario(db.Model):
     email = db.Column(db.String(80))
     celular = db.Column(db.Integer())
     mensaje = db.Column(db.String(255))
+    done = db.Column(db.Boolean,default=False)
